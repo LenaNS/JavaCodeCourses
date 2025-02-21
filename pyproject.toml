@@ -1,0 +1,19 @@
+[project]
+name = "javacodecourses"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "aiohttp>=3.11.12",
+    "fastapi>=0.115.8",
+    "httpx>=0.28.1",
+    "ruff>=0.9.6",
+    "uvicorn>=0.34.0",
+]
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
