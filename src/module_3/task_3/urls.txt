@@ -1,0 +1,4 @@
+https://example.com
+https://nonexistent.url
+https://httpbin.org/status/404
+https://ru.pinterest.com/
