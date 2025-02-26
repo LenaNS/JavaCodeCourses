@@ -1,4 +1,3 @@
-import io
 import asyncio
 import json
 from typing import Tuple
@@ -26,7 +25,6 @@ async def fetch_urls(urls_file_path: str, file_path: str) -> None:
                 with open(file_path, "a") as file:
                     json.dump({"url": task[0], "status_code": task[1]}, file)
                     file.write("\n")
-
 
 
 asyncio.run(fetch_urls("urls.txt", "results.json"))

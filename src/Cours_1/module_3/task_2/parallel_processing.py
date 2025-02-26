@@ -30,17 +30,12 @@ def process_with_pool(data):
 
 # Вариант В
 def worker(q1: Queue, q2: Queue):
-    while not q1.empty():
-        value = q1.get()
-        if not value:
-            break
+    value = q1.get()
+    if not value:
+        return
 
-        result = process_number(value)
-        print(result)
-        q2.put(result)
-
-    print("Закрыт")
-    q1.close()
+    result = process_number(value)
+    q2.put(result)
 
 
 def process_with_processes(data):
@@ -105,7 +100,7 @@ def save_results_to_file(results, filename="results.json"):
 
 
 if __name__ == "__main__":
-    n = 100
+    n = 100000
     data = generate_data(n)
 
     comparison_results = compare_methods(data)
